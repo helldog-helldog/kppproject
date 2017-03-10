@@ -13,6 +13,7 @@
 		52049F721E728B7100E67092 /* RahoovatorIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52049F701E728B7100E67092 /* RahoovatorIOS.xcdatamodeld */; };
 		52049F741E728B7100E67092 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52049F731E728B7100E67092 /* Assets.xcassets */; };
 		52049F771E728B7100E67092 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52049F751E728B7100E67092 /* LaunchScreen.storyboard */; };
+		52049F811E72EC9800E67092 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52049F801E72EC9800E67092 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		52049F731E728B7100E67092 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52049F761E728B7100E67092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52049F781E728B7100E67092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52049F801E72EC9800E67092 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				52049F691E728B7100E67092 /* AppDelegate.swift */,
 				52049F6B1E728B7100E67092 /* ViewController.swift */,
+				52049F801E72EC9800E67092 /* CoreDataManager.swift */,
 				52049F6D1E728B7100E67092 /* Main.storyboard */,
 				52049F731E728B7100E67092 /* Assets.xcassets */,
 				52049F751E728B7100E67092 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			files = (
 				52049F6C1E728B7100E67092 /* ViewController.swift in Sources */,
 				52049F721E728B7100E67092 /* RahoovatorIOS.xcdatamodeld in Sources */,
+				52049F811E72EC9800E67092 /* CoreDataManager.swift in Sources */,
 				52049F6A1E728B7100E67092 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +305,7 @@
 				52049F7D1E728B7100E67092 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
