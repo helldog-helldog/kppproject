@@ -14,6 +14,8 @@
 		52049F741E728B7100E67092 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52049F731E728B7100E67092 /* Assets.xcassets */; };
 		52049F771E728B7100E67092 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52049F751E728B7100E67092 /* LaunchScreen.storyboard */; };
 		52049F811E72EC9800E67092 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52049F801E72EC9800E67092 /* CoreDataManager.swift */; };
+		DF4567A91E7BDEC500DA0283 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4567A71E7BDEC500DA0283 /* MainVC.swift */; };
+		DF4567AA1E7BDEC500DA0283 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF4567A81E7BDEC500DA0283 /* MainVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		52049F761E728B7100E67092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52049F781E728B7100E67092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52049F801E72EC9800E67092 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		DF4567A71E7BDEC500DA0283 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainVC.swift; path = Controlers/MainVC/MainVC.swift; sourceTree = "<group>"; };
+		DF4567A81E7BDEC500DA0283 /* MainVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainVC.xib; path = Controlers/MainVC/MainVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 		52049F681E728B7100E67092 /* RahoovatorIOS */ = {
 			isa = PBXGroup;
 			children = (
+				DF4567A51E7BDDB000DA0283 /* Models */,
+				DF4567A41E7BDD9A00DA0283 /* Controlers */,
 				52049F691E728B7100E67092 /* AppDelegate.swift */,
 				52049F6B1E728B7100E67092 /* ViewController.swift */,
 				52049F801E72EC9800E67092 /* CoreDataManager.swift */,
@@ -68,6 +74,30 @@
 				52049F701E728B7100E67092 /* RahoovatorIOS.xcdatamodeld */,
 			);
 			path = RahoovatorIOS;
+			sourceTree = "<group>";
+		};
+		DF4567A41E7BDD9A00DA0283 /* Controlers */ = {
+			isa = PBXGroup;
+			children = (
+				DF4567A61E7BDE2100DA0283 /* MainVC */,
+			);
+			name = Controlers;
+			sourceTree = "<group>";
+		};
+		DF4567A51E7BDDB000DA0283 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		DF4567A61E7BDE2100DA0283 /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				DF4567A71E7BDEC500DA0283 /* MainVC.swift */,
+				DF4567A81E7BDEC500DA0283 /* MainVC.xib */,
+			);
+			name = MainVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52049F771E728B7100E67092 /* LaunchScreen.storyboard in Resources */,
+				DF4567AA1E7BDEC500DA0283 /* MainVC.xib in Resources */,
 				52049F741E728B7100E67092 /* Assets.xcassets in Resources */,
 				52049F6F1E728B7100E67092 /* Main.storyboard in Resources */,
 			);
@@ -143,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52049F6C1E728B7100E67092 /* ViewController.swift in Sources */,
+				DF4567A91E7BDEC500DA0283 /* MainVC.swift in Sources */,
 				52049F721E728B7100E67092 /* RahoovatorIOS.xcdatamodeld in Sources */,
 				52049F811E72EC9800E67092 /* CoreDataManager.swift in Sources */,
 				52049F6A1E728B7100E67092 /* AppDelegate.swift in Sources */,
