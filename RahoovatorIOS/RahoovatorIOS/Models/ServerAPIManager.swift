@@ -16,4 +16,12 @@ class ServerAPIManager {
     class func connectToServer() {
         client.connect(timeout: 10)
     }
+    
+    class func send(data: String?) {
+        if data == nil {
+            return
+        }
+        
+        client.send(string: data!)
+    }
 }
