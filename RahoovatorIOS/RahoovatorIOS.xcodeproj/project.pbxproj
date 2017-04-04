@@ -14,11 +14,14 @@
 		52049F741E728B7100E67092 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52049F731E728B7100E67092 /* Assets.xcassets */; };
 		52049F771E728B7100E67092 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52049F751E728B7100E67092 /* LaunchScreen.storyboard */; };
 		52049F811E72EC9800E67092 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52049F801E72EC9800E67092 /* CoreDataManager.swift */; };
+		520516281E9398C700F96199 /* ServerAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520516271E9398C700F96199 /* ServerAPIManager.swift */; };
+		5C31A28DC5706371FF9404C8 /* Pods_RahoovatorIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319967631C91D5E56EADAA89 /* Pods_RahoovatorIOS.framework */; };
 		DF4567A91E7BDEC500DA0283 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4567A71E7BDEC500DA0283 /* MainVC.swift */; };
 		DF4567AA1E7BDEC500DA0283 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF4567A81E7BDEC500DA0283 /* MainVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		319967631C91D5E56EADAA89 /* Pods_RahoovatorIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RahoovatorIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52049F661E728B7100E67092 /* RahoovatorIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RahoovatorIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52049F691E728B7100E67092 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52049F6B1E728B7100E67092 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,8 +31,11 @@
 		52049F761E728B7100E67092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52049F781E728B7100E67092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52049F801E72EC9800E67092 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		520516271E9398C700F96199 /* ServerAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServerAPIManager.swift; path = Models/ServerAPIManager.swift; sourceTree = "<group>"; };
+		AC74F546BC2EB62631C6EC53 /* Pods-RahoovatorIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RahoovatorIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RahoovatorIOS/Pods-RahoovatorIOS.release.xcconfig"; sourceTree = "<group>"; };
 		DF4567A71E7BDEC500DA0283 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainVC.swift; path = Controlers/MainVC/MainVC.swift; sourceTree = "<group>"; };
 		DF4567A81E7BDEC500DA0283 /* MainVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainVC.xib; path = Controlers/MainVC/MainVC.xib; sourceTree = "<group>"; };
+		ECB4E68FCF7F1E6BD23296DD /* Pods-RahoovatorIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RahoovatorIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RahoovatorIOS/Pods-RahoovatorIOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C31A28DC5706371FF9404C8 /* Pods_RahoovatorIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C60C8A2A7BD30632C53ED06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				319967631C91D5E56EADAA89 /* Pods_RahoovatorIOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		52049F5D1E728B7100E67092 = {
 			isa = PBXGroup;
 			children = (
 				52049F681E728B7100E67092 /* RahoovatorIOS */,
 				52049F671E728B7100E67092 /* Products */,
+				CA1873B0ACDD7CDC8777879E /* Pods */,
+				1C60C8A2A7BD30632C53ED06 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +93,15 @@
 			path = RahoovatorIOS;
 			sourceTree = "<group>";
 		};
+		CA1873B0ACDD7CDC8777879E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ECB4E68FCF7F1E6BD23296DD /* Pods-RahoovatorIOS.debug.xcconfig */,
+				AC74F546BC2EB62631C6EC53 /* Pods-RahoovatorIOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DF4567A41E7BDD9A00DA0283 /* Controlers */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +113,7 @@
 		DF4567A51E7BDDB000DA0283 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				520516271E9398C700F96199 /* ServerAPIManager.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -107,9 +134,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52049F7B1E728B7100E67092 /* Build configuration list for PBXNativeTarget "RahoovatorIOS" */;
 			buildPhases = (
+				B22A5948E982BD98BB36EC8B /* [CP] Check Pods Manifest.lock */,
 				52049F621E728B7100E67092 /* Sources */,
 				52049F631E728B7100E67092 /* Frameworks */,
 				52049F641E728B7100E67092 /* Resources */,
+				754ED6748FAA01F665DFC674 /* [CP] Embed Pods Frameworks */,
+				9E7C45735B1B79E5F1E5EDA1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,6 +198,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		754ED6748FAA01F665DFC674 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RahoovatorIOS/Pods-RahoovatorIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E7C45735B1B79E5F1E5EDA1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RahoovatorIOS/Pods-RahoovatorIOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B22A5948E982BD98BB36EC8B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		52049F621E728B7100E67092 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -176,6 +254,7 @@
 				52049F6C1E728B7100E67092 /* ViewController.swift in Sources */,
 				DF4567A91E7BDEC500DA0283 /* MainVC.swift in Sources */,
 				52049F721E728B7100E67092 /* RahoovatorIOS.xcdatamodeld in Sources */,
+				520516281E9398C700F96199 /* ServerAPIManager.swift in Sources */,
 				52049F811E72EC9800E67092 /* CoreDataManager.swift in Sources */,
 				52049F6A1E728B7100E67092 /* AppDelegate.swift in Sources */,
 			);
@@ -296,6 +375,7 @@
 		};
 		52049F7C1E728B7100E67092 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECB4E68FCF7F1E6BD23296DD /* Pods-RahoovatorIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RahoovatorIOS/Info.plist;
@@ -308,6 +388,7 @@
 		};
 		52049F7D1E728B7100E67092 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC74F546BC2EB62631C6EC53 /* Pods-RahoovatorIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RahoovatorIOS/Info.plist;
