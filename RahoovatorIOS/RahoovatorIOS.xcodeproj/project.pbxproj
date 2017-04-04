@@ -64,9 +64,9 @@
 			children = (
 				DF4567A51E7BDDB000DA0283 /* Models */,
 				DF4567A41E7BDD9A00DA0283 /* Controlers */,
-				52049F691E728B7100E67092 /* AppDelegate.swift */,
 				52049F6B1E728B7100E67092 /* ViewController.swift */,
 				52049F801E72EC9800E67092 /* CoreDataManager.swift */,
+				52049F691E728B7100E67092 /* AppDelegate.swift */,
 				52049F6D1E728B7100E67092 /* Main.storyboard */,
 				52049F731E728B7100E67092 /* Assets.xcassets */,
 				52049F751E728B7100E67092 /* LaunchScreen.storyboard */,
