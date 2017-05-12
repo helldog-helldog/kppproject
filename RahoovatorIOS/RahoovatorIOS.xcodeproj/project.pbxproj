@@ -14,6 +14,7 @@
 		52049F741E728B7100E67092 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52049F731E728B7100E67092 /* Assets.xcassets */; };
 		52049F771E728B7100E67092 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52049F751E728B7100E67092 /* LaunchScreen.storyboard */; };
 		52049F811E72EC9800E67092 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52049F801E72EC9800E67092 /* CoreDataManager.swift */; };
+		5204D5DF1EC5B7400025DE80 /* HistoryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5204D5DE1EC5B7400025DE80 /* HistoryTVC.swift */; };
 		520516281E9398C700F96199 /* ServerAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520516271E9398C700F96199 /* ServerAPIManager.swift */; };
 		5C31A28DC5706371FF9404C8 /* Pods_RahoovatorIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319967631C91D5E56EADAA89 /* Pods_RahoovatorIOS.framework */; };
 		DF4567A91E7BDEC500DA0283 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4567A71E7BDEC500DA0283 /* MainVC.swift */; };
@@ -31,6 +32,7 @@
 		52049F761E728B7100E67092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52049F781E728B7100E67092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52049F801E72EC9800E67092 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		5204D5DE1EC5B7400025DE80 /* HistoryTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryTVC.swift; path = Controlers/HistoryTVC/HistoryTVC.swift; sourceTree = "<group>"; };
 		520516271E9398C700F96199 /* ServerAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServerAPIManager.swift; path = Models/ServerAPIManager.swift; sourceTree = "<group>"; };
 		AC74F546BC2EB62631C6EC53 /* Pods-RahoovatorIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RahoovatorIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RahoovatorIOS/Pods-RahoovatorIOS.release.xcconfig"; sourceTree = "<group>"; };
 		DF4567A71E7BDEC500DA0283 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainVC.swift; path = Controlers/MainVC/MainVC.swift; sourceTree = "<group>"; };
@@ -93,6 +95,14 @@
 			path = RahoovatorIOS;
 			sourceTree = "<group>";
 		};
+		5204D5DD1EC5B6DF0025DE80 /* HistoryTVC */ = {
+			isa = PBXGroup;
+			children = (
+				5204D5DE1EC5B7400025DE80 /* HistoryTVC.swift */,
+			);
+			name = HistoryTVC;
+			sourceTree = "<group>";
+		};
 		CA1873B0ACDD7CDC8777879E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +115,7 @@
 		DF4567A41E7BDD9A00DA0283 /* Controlers */ = {
 			isa = PBXGroup;
 			children = (
+				5204D5DD1EC5B6DF0025DE80 /* HistoryTVC */,
 				DF4567A61E7BDE2100DA0283 /* MainVC */,
 			);
 			name = Controlers;
@@ -255,6 +266,7 @@
 				DF4567A91E7BDEC500DA0283 /* MainVC.swift in Sources */,
 				52049F721E728B7100E67092 /* RahoovatorIOS.xcdatamodeld in Sources */,
 				520516281E9398C700F96199 /* ServerAPIManager.swift in Sources */,
+				5204D5DF1EC5B7400025DE80 /* HistoryTVC.swift in Sources */,
 				52049F811E72EC9800E67092 /* CoreDataManager.swift in Sources */,
 				52049F6A1E728B7100E67092 /* AppDelegate.swift in Sources */,
 			);

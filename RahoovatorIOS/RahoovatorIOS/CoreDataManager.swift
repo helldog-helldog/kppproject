@@ -13,6 +13,19 @@ class CoreDataManager {
     
     static let shared = CoreDataManager()
     
+    func add(item: [[String:Any]]) {
+        let historyEntity    = NSEntityDescription.entity(forEntityName: "History", in: managedObjectContext)
+    
+        let objectToInsert = History(entity: historyEntity!,
+                                     insertInto: managedObjectContext)
+        
+        objectToInsert.inputPrice = 228
+        //...
+        
+        
+        save()
+    }
+    
     func save() {
         do {
             try managedObjectContext.save()
@@ -22,7 +35,7 @@ class CoreDataManager {
         }
     }
     
-    // MARK : Core Data stack
+// MARK : Core Data stack
     lazy var applicationDocumentsDirectory: URL = {
         // The directory the application uses to store the Core Data store file.
         let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)

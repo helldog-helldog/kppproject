@@ -35,6 +35,8 @@ class MainVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPic
 
         createCodePicker(array: myArray)
         closeCouesor()
+        
+        addHistoryButton()
     }
 
     func closeCouesor() {
@@ -58,6 +60,21 @@ class MainVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPic
         textField6.inputView = picker
         textField8.inputView = picker
 
+    }
+    
+    func addHistoryButton() {
+        let historyButton = UIBarButtonItem(title: "History",
+                                            style: .plain,
+                                            target: self,
+                                            action: #selector(showHistory))
+        navigationItem.rightBarButtonItem = historyButton
+    }
+    
+    func showHistory() {
+        let history = HistoryTVC()
+        history.delegate = self
+        
+        navigationController?.pushViewController(history, animated: true)
     }
 
     func createDataWithArrayType() -> [String] {
@@ -140,6 +157,11 @@ class MainVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPic
             }
         }
     }
+}
 
-
+//MARK: - HistoryTVCDelegate
+extension MainVC: HistoryTVCDelegate {
+    func didSelectHistoryItem() {
+        print("DID SELECTE HISTORY ITEM")
+    }
 }
