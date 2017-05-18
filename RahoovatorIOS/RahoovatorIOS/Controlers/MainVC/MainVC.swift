@@ -79,9 +79,9 @@ class MainVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPic
 
     func createDataWithArrayType() -> [String] {
         if SegmentControl.selectedSegmentIndex == 0{
-            myArray = ["мг","г","кг","ц","т"]
+            myArray = ["KG","G","K","MG","F", "U"]
         } else {
-            myArray = ["мм^3","см^3","л","м^3"]
+            myArray = ["L","ML","GA","P"]
         }
         return myArray
     }
