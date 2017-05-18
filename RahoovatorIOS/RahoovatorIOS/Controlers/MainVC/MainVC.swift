@@ -151,6 +151,7 @@ class MainVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPic
         {
             myArray = createDataWithArrayType()
         }
+        picker.reloadAllComponents()
         for (index, element) in myArray.enumerated(){
             if element == textField.text {
                 picker.selectRow(index, inComponent: 0, animated: true)
