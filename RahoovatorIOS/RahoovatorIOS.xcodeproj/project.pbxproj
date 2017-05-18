@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5203CFCA1ECE0B80005826C4 /* LSNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5203CFC91ECE0B80005826C4 /* LSNetworkManager.swift */; };
 		52049F6A1E728B7100E67092 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52049F691E728B7100E67092 /* AppDelegate.swift */; };
 		52049F6C1E728B7100E67092 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52049F6B1E728B7100E67092 /* ViewController.swift */; };
 		52049F6F1E728B7100E67092 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52049F6D1E728B7100E67092 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		319967631C91D5E56EADAA89 /* Pods_RahoovatorIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RahoovatorIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5203CFC91ECE0B80005826C4 /* LSNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LSNetworkManager.swift; path = Models/LSNetworkManager.swift; sourceTree = "<group>"; };
 		52049F661E728B7100E67092 /* RahoovatorIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RahoovatorIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52049F691E728B7100E67092 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52049F6B1E728B7100E67092 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 		DF4567A51E7BDDB000DA0283 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5203CFC91ECE0B80005826C4 /* LSNetworkManager.swift */,
 				520516271E9398C700F96199 /* ServerAPIManager.swift */,
 			);
 			name = Models;
@@ -290,6 +293,7 @@
 				52049F721E728B7100E67092 /* RahoovatorIOS.xcdatamodeld in Sources */,
 				520516281E9398C700F96199 /* ServerAPIManager.swift in Sources */,
 				5204D5DF1EC5B7400025DE80 /* HistoryTVC.swift in Sources */,
+				5203CFCA1ECE0B80005826C4 /* LSNetworkManager.swift in Sources */,
 				52049F811E72EC9800E67092 /* CoreDataManager.swift in Sources */,
 				92AFDD641ECE047100E27D75 /* HistoryCellTableViewCell.swift in Sources */,
 				52049F6A1E728B7100E67092 /* AppDelegate.swift in Sources */,
