@@ -19,6 +19,8 @@ class MainVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPic
     @IBOutlet weak var textField6: UITextField!
     @IBOutlet weak var textField7: UITextField!
     @IBOutlet weak var textField8: UITextField!
+    @IBOutlet weak var cinazaodyn: UITextField!
+    @IBOutlet weak var knopka: UIButton!
     
     var myArray = [String]()
     var moneyArray = ["USD", "EUR", "RUB", "UAH"]
@@ -102,11 +104,11 @@ class MainVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPic
         hideKeyboard()
         myArray = createDataWithArrayType()
         if SegmentControl.selectedSegmentIndex == 1{
-            textField2.text = "л"
-            textField6.text = "л"
+            textField2.text = "L"
+            textField6.text = "L"
         } else {
-            textField2.text = "кг"
-            textField6.text = "кг"
+            textField2.text = "KG"
+            textField6.text = "KG"
         }
     }
     
@@ -158,11 +160,87 @@ class MainVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPic
             }
         }
     }
+    
+    
+    @IBAction func obrahyvaty() {
+        guard let kg = textField2.text,
+            let f = textField6.text,
+            let sto1 = textField1.text,
+            let usd = textField4.text,
+            let eur = textField8.text,
+            let sto2 = textField3.text,
+            sto1.characters.count > 0,
+            sto2.characters.count > 0 else {
+                let alert = UIAlertController(title: "Помилка",
+                                              message: "Заповніть всі поля",
+                                              preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK",
+                                              style: .default,
+                                              handler: nil))
+                present(alert, animated: true, completion: nil)
+                return
+        }
+        
+        
+        
+        knopka.isEnabled = false
+        
+        ServerAPIManager.send(data: "\(kg)_\(f)_\(sto1)_\(usd)_\(eur)_\(sto2)") {
+            success, string in
+            
+            self.knopka.isEnabled = true
+            
+            if success {
+                let newString = string.replacingOccurrences(of: ",", with: ".")
+                let vaga = Float(newString.components(separatedBy: " ")[0])
+                let kyrs = Float(newString.components(separatedBy: " ")[1])
+                let zaOdyn = Float(newString.components(separatedBy: " ")[2])
+                
+                self.textField5.text = "\(vaga ?? 0)"
+                self.textField7.text = "\(kyrs ?? 0)"
+                self.cinazaodyn.text = "\(zaOdyn ?? 0)"
+                
+                
+                CoreDataManager.shared.add(param1: sto1,
+                                           param2: kg,
+                                           param3: sto2,
+                                           param4: usd,
+                                           param5: "\(vaga ?? 0)",
+                                           param6: f,
+                                           param7: "\(kyrs ?? 0)",
+                                           param8: eur,
+                                           param9: "\(zaOdyn ?? 0)")
+                
+                
+                
+            } else {
+                let alert = UIAlertController(title: "Помилка",
+                                              message: "Невірно введено дані",
+                                              preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK",
+                                              style: .default,
+                                              handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+        
+        
+    }
+    
 }
 
 //MARK: - HistoryTVCDelegate
 extension MainVC: HistoryTVCDelegate {
-    func didSelectHistoryItem() {
+    func didSelectHistoryItem(item: History) {
         print("DID SELECTE HISTORY ITEM")
+        textField3.text = item.inputValue
+        textField4.text = item.inputValueMeasure
+        textField1.text = item.inputPrice
+        textField2.text = item.inputPriceMeasure
+        textField7.text = item.outputValue
+        textField8.text = item.outputValueMeasure
+        textField5.text = item.outputPrice
+        textField6.text = item.outputPriceMeasure
+        cinazaodyn.text = item.pricePerUnit
     }
 }

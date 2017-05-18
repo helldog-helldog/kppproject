@@ -13,15 +13,29 @@ class CoreDataManager {
     
     static let shared = CoreDataManager()
     
-    func add(item: [[String:Any]]) {
+    func add(param1: String,
+             param2: String,
+             param3: String,
+             param4: String,
+             param5: String,
+             param6: String,
+             param7: String,
+             param8: String,
+             param9: String) {
         let historyEntity    = NSEntityDescription.entity(forEntityName: "History", in: managedObjectContext)
     
         let objectToInsert = History(entity: historyEntity!,
                                      insertInto: managedObjectContext)
         
-        objectToInsert.inputPrice = 228
-        //...
-        
+        objectToInsert.inputPrice = param1
+        objectToInsert.inputPriceMeasure = param2
+        objectToInsert.inputValue = param3
+        objectToInsert.inputValueMeasure = param4
+        objectToInsert.outputPrice = param5
+        objectToInsert.outputPriceMeasure = param6
+        objectToInsert.outputValue = param7
+        objectToInsert.outputValueMeasure = param8
+        objectToInsert.pricePerUnit = param9
         
         save()
     }

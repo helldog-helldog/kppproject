@@ -7,7 +7,7 @@
 //
 
 protocol HistoryTVCDelegate {
-    func didSelectHistoryItem()
+    func didSelectHistoryItem(item: History)
 }
 
 import UIKit
@@ -38,16 +38,25 @@ class HistoryTVC: UITableViewController, NSFetchedResultsControllerDelegate {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryCellTableViewCell",
-                                                     for: indexPath)
-       // let historyItem = fetchedResultsController.object(at: indexPath)
+                                                     for: indexPath) as! HistoryCellTableViewCell
+        let historyItem = fetchedResultsController.object(at: indexPath)
 
+        cell.inputPrice.text = (historyItem.inputValue ?? "") + (historyItem.inputValueMeasure ?? "")
+        cell.inputVal.text = (historyItem.inputPrice ?? "") + (historyItem.inputPriceMeasure ?? "")
+        cell.outputPrice.text = (historyItem.outputValue ?? "") + (historyItem.outputValueMeasure ?? "")
+        cell.outputVal.text = (historyItem.outputPrice ?? "") + (historyItem.outputPriceMeasure ?? "")
+        cell.pricePerUnit.text = historyItem.pricePerUnit
+        
         return cell
 
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         navigationController?.popViewController(animated: true)
-        delegate?.didSelectHistoryItem()
+        
+        let historyItem = fetchedResultsController.object(at: indexPath)
+        
+        delegate?.didSelectHistoryItem(item: historyItem)
     }
     
 //MARK: - Fetched results controller

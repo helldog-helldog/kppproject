@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="106"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="105.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="105"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hC6-Nw-xz3">
@@ -117,6 +117,13 @@
                     <constraint firstItem="D6b-60-hB5" firstAttribute="top" secondItem="hC6-Nw-xz3" secondAttribute="top" constant="20" id="wlq-r0-xgm"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="inputPrice" destination="Ei0-Cp-Rnc" id="0oz-j4-s7r"/>
+                <outlet property="inputVal" destination="XQs-bf-hBD" id="P3u-qO-FPF"/>
+                <outlet property="outputPrice" destination="VSW-Oa-x6R" id="HIg-FY-0Ny"/>
+                <outlet property="outputVal" destination="gWO-uR-6zF" id="tmE-5E-zM2"/>
+                <outlet property="pricePerUnit" destination="cfJ-78-YbL" id="Jho-lc-efv"/>
+            </connections>
             <point key="canvasLocation" x="34" y="118"/>
         </tableViewCell>
     </objects>

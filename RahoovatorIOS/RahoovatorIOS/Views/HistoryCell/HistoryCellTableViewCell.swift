@@ -10,15 +10,14 @@ import UIKit
 
 class HistoryCellTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var inputVal: UILabel!
+    @IBOutlet weak var inputPrice: UILabel!
+    @IBOutlet weak var outputVal: UILabel!
+    @IBOutlet weak var outputPrice: UILabel!
+    @IBOutlet weak var pricePerUnit: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }
