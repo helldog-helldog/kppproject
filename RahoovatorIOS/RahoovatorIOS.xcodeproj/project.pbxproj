@@ -17,6 +17,8 @@
 		5204D5DF1EC5B7400025DE80 /* HistoryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5204D5DE1EC5B7400025DE80 /* HistoryTVC.swift */; };
 		520516281E9398C700F96199 /* ServerAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520516271E9398C700F96199 /* ServerAPIManager.swift */; };
 		5C31A28DC5706371FF9404C8 /* Pods_RahoovatorIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319967631C91D5E56EADAA89 /* Pods_RahoovatorIOS.framework */; };
+		92AFDD641ECE047100E27D75 /* HistoryCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AFDD621ECE047100E27D75 /* HistoryCellTableViewCell.swift */; };
+		92AFDD651ECE047100E27D75 /* HistoryCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92AFDD631ECE047100E27D75 /* HistoryCellTableViewCell.xib */; };
 		DF4567A91E7BDEC500DA0283 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4567A71E7BDEC500DA0283 /* MainVC.swift */; };
 		DF4567AA1E7BDEC500DA0283 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF4567A81E7BDEC500DA0283 /* MainVC.xib */; };
 /* End PBXBuildFile section */
@@ -34,6 +36,8 @@
 		52049F801E72EC9800E67092 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		5204D5DE1EC5B7400025DE80 /* HistoryTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryTVC.swift; path = Controlers/HistoryTVC/HistoryTVC.swift; sourceTree = "<group>"; };
 		520516271E9398C700F96199 /* ServerAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServerAPIManager.swift; path = Models/ServerAPIManager.swift; sourceTree = "<group>"; };
+		92AFDD621ECE047100E27D75 /* HistoryCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryCellTableViewCell.swift; path = Views/HistoryCell/HistoryCellTableViewCell.swift; sourceTree = "<group>"; };
+		92AFDD631ECE047100E27D75 /* HistoryCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HistoryCellTableViewCell.xib; path = Views/HistoryCell/HistoryCellTableViewCell.xib; sourceTree = "<group>"; };
 		AC74F546BC2EB62631C6EC53 /* Pods-RahoovatorIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RahoovatorIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RahoovatorIOS/Pods-RahoovatorIOS.release.xcconfig"; sourceTree = "<group>"; };
 		DF4567A71E7BDEC500DA0283 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainVC.swift; path = Controlers/MainVC/MainVC.swift; sourceTree = "<group>"; };
 		DF4567A81E7BDEC500DA0283 /* MainVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainVC.xib; path = Controlers/MainVC/MainVC.xib; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 		52049F681E728B7100E67092 /* RahoovatorIOS */ = {
 			isa = PBXGroup;
 			children = (
+				92AFDD601ECE03DE00E27D75 /* Views */,
 				DF4567A51E7BDDB000DA0283 /* Models */,
 				DF4567A41E7BDD9A00DA0283 /* Controlers */,
 				52049F6B1E728B7100E67092 /* ViewController.swift */,
@@ -101,6 +106,23 @@
 				5204D5DE1EC5B7400025DE80 /* HistoryTVC.swift */,
 			);
 			name = HistoryTVC;
+			sourceTree = "<group>";
+		};
+		92AFDD601ECE03DE00E27D75 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				92AFDD611ECE040100E27D75 /* HistoryCell */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		92AFDD611ECE040100E27D75 /* HistoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				92AFDD621ECE047100E27D75 /* HistoryCellTableViewCell.swift */,
+				92AFDD631ECE047100E27D75 /* HistoryCellTableViewCell.xib */,
+			);
+			name = HistoryCell;
 			sourceTree = "<group>";
 		};
 		CA1873B0ACDD7CDC8777879E /* Pods */ = {
@@ -204,6 +226,7 @@
 				DF4567AA1E7BDEC500DA0283 /* MainVC.xib in Resources */,
 				52049F741E728B7100E67092 /* Assets.xcassets in Resources */,
 				52049F6F1E728B7100E67092 /* Main.storyboard in Resources */,
+				92AFDD651ECE047100E27D75 /* HistoryCellTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +291,7 @@
 				520516281E9398C700F96199 /* ServerAPIManager.swift in Sources */,
 				5204D5DF1EC5B7400025DE80 /* HistoryTVC.swift in Sources */,
 				52049F811E72EC9800E67092 /* CoreDataManager.swift in Sources */,
+				92AFDD641ECE047100E27D75 /* HistoryCellTableViewCell.swift in Sources */,
 				52049F6A1E728B7100E67092 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

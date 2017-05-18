@@ -19,20 +19,30 @@ class HistoryTVC: UITableViewController, NSFetchedResultsControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        registerTableViewElements()
+    }
+    
+    func registerTableViewElements() {
+        tableView.register(UINib(nibName: "HistoryCellTableViewCell",
+                                 bundle: nil), forCellReuseIdentifier: "HistoryCellTableViewCell")
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return fetchedResultsController.fetchedObjects?.count ?? 0
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 106
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-        
-        let historyItem = fetchedResultsController.object(at: indexPath)
-        
-        // warning: configure cell
-        
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryCellTableViewCell",
+                                                     for: indexPath)
+       // let historyItem = fetchedResultsController.object(at: indexPath)
+
         return cell
+
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
