@@ -21,9 +21,10 @@ class MainVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPic
     @IBOutlet weak var textField8: UITextField!
     @IBOutlet weak var cinazaodyn: UITextField!
     @IBOutlet weak var knopka: UIButton!
+    @IBOutlet weak var cinaZaOd: UILabel!
     
     var myArray = [String]()
-    var moneyArray = ["USD", "EUR", "RUB", "UAH"]
+    var moneyArray = ["USD", "EUR", "RUB", "UAH", "PLN"]
     var picker = UIPickerView()
     var activTextField: UITextField!
     
@@ -81,9 +82,9 @@ class MainVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPic
 
     func createDataWithArrayType() -> [String] {
         if SegmentControl.selectedSegmentIndex == 0{
-            myArray = ["KG","G","K","MG","F", "U"]
+            myArray = ["kg","g","k","mg","ft", "oz"]
         } else {
-            myArray = ["L","ML","GA","P"]
+            myArray = ["l","ml","gallon","pint"]
         }
         return myArray
     }
@@ -104,11 +105,11 @@ class MainVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPic
         hideKeyboard()
         myArray = createDataWithArrayType()
         if SegmentControl.selectedSegmentIndex == 1{
-            textField2.text = "L"
-            textField6.text = "L"
+            textField2.text = "l"
+            textField6.text = "l"
         } else {
-            textField2.text = "KG"
-            textField6.text = "KG"
+            textField2.text = "kg"
+            textField6.text = "kg"
         }
     }
     
@@ -163,6 +164,7 @@ class MainVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPic
     
     
     @IBAction func obrahyvaty() {
+        cinaZaOd.text = "Ціна (\(textField8.text!)/\(textField6.text!)):"
         guard let kg = textField2.text,
             let f = textField6.text,
             let sto1 = textField1.text,
@@ -172,7 +174,7 @@ class MainVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPic
             sto1.characters.count > 0,
             sto2.characters.count > 0 else {
                 let alert = UIAlertController(title: "Помилка",
-                                              message: "Заповніть всі поля",
+                                              message: "Помилка сервера",
                                               preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK",
                                               style: .default,
@@ -215,7 +217,7 @@ class MainVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPic
                 
             } else {
                 let alert = UIAlertController(title: "Помилка",
-                                              message: "Невірно введено дані",
+                                              message: "Помилка сервера",
                                               preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK",
                                               style: .default,

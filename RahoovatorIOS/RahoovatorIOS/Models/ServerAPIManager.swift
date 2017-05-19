@@ -11,7 +11,7 @@ import Foundation
 class ServerAPIManager {
     class func send(data: String,
                     completion handler: ((Bool, String) -> ())?) {
-        let path = URL(string: "http://192.168.0.5/" + data)!
+        let path = URL(string: "http://192.168.137.249/" + data)!
         LSNetworkManager.getRequestWith(path: path) {
             responseData, statuscode in
             guard let response = responseData else {
